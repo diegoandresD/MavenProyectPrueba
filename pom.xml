@@ -40,31 +40,7 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.39.1</version>
-                <executions>
-                    <execution>
-                        <id>build-dockerimage</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
-
-                <configuration>
-                    <images>
-                        <image>
-                            <name>sd2122-tp1-${authors}</name>
-                            <build>
-                                <dockerFile>${project.basedir}/Dockerfile</dockerFile>
-                            </build>
-                        </image>
-                    </images>
-                </configuration>
-            </plugin>
+            
         </plugins>
     </build>
     <dependencies>
